@@ -1,0 +1,61 @@
+name:                panic-repro-initTc-unsolved-constraints
+version:             0.0.0.1
+synopsis:            S
+description:         D
+homepage:            http://bitemyapp.com
+license:             BSD3
+author:              Chris Allen
+maintainer:          cma@bitemyapp.com
+copyright:           2017, Chris Allen
+category:            Web
+
+ghc-options:
+  - -Wall
+  - -with-rtsopts=-T
+
+default-extensions:
+  - ConstraintKinds
+  - DataKinds
+  - DeriveGeneric
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - LambdaCase
+  - MultiParamTypeClasses
+  - OverloadedStrings
+  - PartialTypeSignatures
+  - QuasiQuotes
+  - RecordWildCards
+  - TemplateHaskell
+  - TypeFamilies
+  - TypeOperators
+  - ScopedTypeVariables
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Lib
+
+dependencies:
+  - base >= 4.8 && < 5
+  - aeson
+  - bytestring
+  - containers
+  - esqueleto
+  - lens
+  - monad-control
+  - mtl
+  - mysql >= 0.1.4
+  - persistent
+  - persistent-mysql
+  - persistent-template
+  - servant
+  - servant-server
+  - template-haskell
+  - text
+  - time
+  - wai
+  - wai-extra
+  - wai-middleware-metrics
+  - warp
